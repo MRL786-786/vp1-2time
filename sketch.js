@@ -26,6 +26,7 @@ function draw() {
   
 
   if(keyWentDown(UP_ARROW)){
+    foodS=foodS-1
     writeStock(foodS)
     dog.addImage("dog",happydogimg)
   } 
@@ -45,7 +46,8 @@ function readStock(data){
 
 function writeStock(x){
   database.ref('/').update({
-    food:x
+    Food:x
+
   })
 }
 
